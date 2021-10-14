@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorpane" onMouseClicked="#minimizeHandle" prefHeight="660.0" prefWidth="400.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xenmax.RegistrationUIController">
+    <stylesheets>
+        <URL value="@stylesheet.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="33.0" prefWidth="400.0" style="-fx-background-color: #1b024c;">
+         <children>
+            <ImageView fitHeight="21.0" fitWidth="24.0" layoutX="372.0" layoutY="6.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/exit1.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="minimize" fitHeight="21.0" fitWidth="24.0" layoutX="348.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/minimize.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="24.0" layoutX="-1.0" layoutY="6.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/back.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="24.0" layoutX="18.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/xenmaxb.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="143.0" layoutY="-2.0" prefHeight="17.0" prefWidth="114.0" text="XenMax" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="36.0" prefHeight="641.0" prefWidth="400.0" style="-fx-background-color: #1b024c;">
+         <children>
+            <ImageView fitHeight="110.0" fitWidth="114.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/xenmaxb.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="name" layoutX="111.0" layoutY="143.0" prefHeight="26.0" prefWidth="210.0" promptText="                      Name" styleClass="textfield" stylesheets="@stylesheet.css" />
+            <TextField fx:id="username" layoutX="111.0" layoutY="183.0" prefHeight="26.0" prefWidth="210.0" promptText="                      Username" styleClass="textfield" stylesheets="@stylesheet.css" />
+            <PasswordField fx:id="password" alignment="CENTER" layoutX="112.0" layoutY="223.0" prefHeight="25.0" prefWidth="210.0" promptText="Password" />
+            <PasswordField fx:id="cpassword" alignment="CENTER" layoutX="112.0" layoutY="265.0" prefHeight="25.0" prefWidth="210.0" promptText="Confirm Password" />
+            <DatePicker fx:id="dob" layoutX="113.0" layoutY="306.0" prefHeight="25.0" prefWidth="210.0" promptText="                  Date of Birth" />
+            <Button fx:id="image" alignment="CENTER" layoutX="113.0" layoutY="347.0" mnemonicParsing="false" onMouseClicked="#chooseImage" prefHeight="34.0" prefWidth="210.0" text="Browse Image" />
+            <ImageView fx:id="image_content" fitHeight="150.0" fitWidth="210.0" layoutX="111.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true" />
+            <Button layoutX="111.0" layoutY="583.0" mnemonicParsing="false" onMouseClicked="#handleSubmit" prefHeight="34.0" prefWidth="210.0" styleClass="loginbutton" text="Submit" />
+            <ImageView fitHeight="29.0" fitWidth="21.0" layoutX="84.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/name.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="21.0" layoutX="84.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/username.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="21.0" layoutX="84.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/psw.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="21.0" layoutX="84.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cpsw.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="21.0" layoutX="84.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/dob.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="21.0" layoutX="84.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/brws.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="33.0" fitWidth="29.0" layoutX="82.0" layoutY="586.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/submit.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="120.0" layoutY="77.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="263.0" text="XenMax Registration" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="28.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

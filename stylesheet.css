@@ -1,0 +1,22 @@
+.button{
+   -fx-border-radius: 10%;
+}
+.loginbutton{
+   -fx-background-color: linear-gradient(#f9a004, #f95d03);
+   -fx-text-fill:#ffffff;
+   -fx-font-size:13px;
+   -fx-font-weight:bold;
+   -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+   -fx-font-family: "Arial Narrow";
+}
+.textfield{
+    -fx-text-fill:black;
+    -fx-text-align:center;
+}
+.button:hover {
+    -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+}
+.transparent-style
+{
+    -fx-background-color:transparent;
+}

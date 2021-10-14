@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main_container" styleClass="transparent-style" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xenmax.LoginUIController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutY="2.0" prefHeight="509.0" prefWidth="723.0" styleClass="mainFxmlClass">
+          <stylesheets>
+              <URL value="@stylesheet.css" />
+          </stylesheets>
+         <children>
+            <AnchorPane prefHeight="25.0" prefWidth="723.0" style="-fx-background-color: #1b024c;">
+               <children>
+                  <ImageView fitHeight="37.0" fitWidth="32.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/xenmaxb.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="37.0" fitWidth="32.0" layoutX="691.0" layoutY="2.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/exit1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="minimize" fitHeight="37.0" fitWidth="32.0" layoutX="659.0" layoutY="2.0" onMouseClicked="#minimizeHandle" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/minimize.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="290.0" layoutY="-2.0" prefHeight="17.0" prefWidth="114.0" text="XenMax" textFill="WHITE">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="camera" layoutX="147.0" layoutY="41.0" prefHeight="52.0" prefWidth="138.0" style="-fx-background-color: #1b024c;">
+               <children>
+                  <ImageView fx:id="camera_logo" fitHeight="42.0" fitWidth="63.0" layoutX="50.0" layoutY="4.0" onMouseClicked="#handleTab" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/camera.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="crowd" layoutX="293.0" layoutY="41.0" prefHeight="52.0" prefWidth="138.0" style="-fx-background-color: #1b024c;">
+               <children>
+                  <ImageView fx:id="crowd_logo" fitHeight="42.0" fitWidth="63.0" layoutX="50.0" layoutY="3.0" onMouseClicked="#handleTab" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/crowd.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="face" layoutX="439.0" layoutY="41.0" prefHeight="52.0" prefWidth="138.0" style="-fx-background-color: #1b024c;">
+               <children>
+                  <ImageView fx:id="face_detect" fitHeight="42.0" fitWidth="63.0" layoutX="47.0" layoutY="3.0" onMouseClicked="#handleTab" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/face.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="cmd" layoutX="585.0" layoutY="41.0" prefHeight="52.0" prefWidth="138.0" style="-fx-background-color: #1b024c;">
+               <children>
+                  <ImageView fx:id="cmd_logo" fitHeight="42.0" fitWidth="63.0" layoutX="47.0" layoutY="3.0" onMouseClicked="#handleTab" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hotspot2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="home" layoutY="41.0" prefHeight="52.0" prefWidth="138.0" style="-fx-background-color: #1b024c;">
+               <children>
+                  <ImageView fx:id="home_logo" fitHeight="42.0" fitWidth="63.0" layoutX="50.0" layoutY="4.0" onMouseClicked="#handleTab" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/home.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="crowd_window" layoutY="102.0" prefHeight="412.0" prefWidth="723.0" style="-fx-background-color: #1b024c;">
+         <children>
+            <ImageView fitHeight="42.0" fitWidth="63.0" layoutX="341.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/darrow.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="camera_window" layoutY="102.0" prefHeight="412.0" prefWidth="723.0" style="-fx-background-color: #1b024c;">
+         <children>
+            <ImageView fitHeight="42.0" fitWidth="63.0" layoutX="196.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/darrow.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="313.0" layoutY="362.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="98.0" styleClass="loginbutton" stylesheets="@stylesheet.css" text="Click" />
+            <ImageView fitHeight="327.0" fitWidth="579.0" layoutX="75.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="cmd_window" layoutY="102.0" prefHeight="412.0" prefWidth="723.0" style="-fx-background-color: #1b024c;">
+         <children>
+            <ImageView fitHeight="42.0" fitWidth="63.0" layoutX="634.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/darrow.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="284.0" layoutY="181.0" mnemonicParsing="false" onMouseClicked="#startHotspot" prefHeight="42.0" prefWidth="177.0" styleClass="loginbutton" stylesheets="@stylesheet.css" text="START WI-FI HOTSPOT" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="face_window" layoutX="-2.0" layoutY="102.0" prefHeight="309.0" prefWidth="725.0" style="-fx-background-color: #1b024c;">
+         <children>
+            <ImageView fitHeight="42.0" fitWidth="63.0" layoutX="489.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/darrow.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="startCam" layoutX="-1.0" layoutY="357.0" mnemonicParsing="false" onAction="#startCamera" prefHeight="52.0" prefWidth="170.0" styleClass="loginbutton" stylesheets="@stylesheet.css" text="START CAMERA" />
+            <Button fx:id="saveBtn" layoutX="183.0" layoutY="357.0" mnemonicParsing="false" onAction="#saveFace" prefHeight="52.0" prefWidth="170.0" styleClass="loginbutton" stylesheets="@stylesheet.css" text="SAVE FACE" />
+            <Button fx:id="recogniseBtn" layoutX="369.0" layoutY="357.0" mnemonicParsing="false" onAction="#faceRecognise" prefHeight="52.0" prefWidth="170.0" styleClass="loginbutton" stylesheets="@stylesheet.css" text="FACE RECOGNISE" />
+            <Button fx:id="stopBtn" layoutX="553.0" layoutY="357.0" mnemonicParsing="false" onAction="#stopCam" prefHeight="52.0" prefWidth="170.0" styleClass="loginbutton" stylesheets="@stylesheet.css" text="STOP" />
+            <ImageView fx:id="frame" fitHeight="345.0" fitWidth="487.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <viewport>
+                  <Rectangle2D minX="400.0" />
+               </viewport></ImageView>
+            <Label fx:id="savedLable" layoutX="155.0" layoutY="160.0" prefHeight="35.0" prefWidth="126.0" text="Face Saved" />
+            <AnchorPane fx:id="pdPane" layoutX="510.0" layoutY="205.0" minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="210.0">
+               <children>
+                  <Label fx:id="title" layoutX="12.0" layoutY="-1.0" text="Person  Data:" textFill="#f4f4f5">
+                     <font>
+                        <Font name="Vermin Vibes 4 Helium" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="70.0" text="Name" textFill="#f8f7f7">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="fname" layoutX="79.0" layoutY="73.0" prefHeight="25.0" prefWidth="118.0" promptText="Enter First Name" />
+                  <TextField fx:id="code" layoutX="78.0" layoutY="40.0" prefHeight="25.0" prefWidth="118.0" promptText="Unique Face code" />
+                  <Label layoutX="9.0" layoutY="37.0" text="Code:" textFill="#fcf9f9">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="15.0" layoutY="33.0" prefHeight="1.0" prefWidth="184.0" />
+                  <Label layoutX="6.0" layoutY="108.0" text=" Reg ." textFill="#fffbfb">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="reg" layoutX="79.0" layoutY="111.0" prefHeight="25.0" prefWidth="118.0" promptText="Reg.No" />
+               </children>
+            </AnchorPane>
+            <ListView fx:id="output" editable="true" layoutX="510.0" layoutY="36.0" prefHeight="169.0" prefWidth="210.0" style="-fx-padding: 10;">
+               <effect>
+                  <Glow />
+               </effect>
+            </ListView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="login" layoutY="102.0" prefHeight="412.0" prefWidth="723.0" style="-fx-background-color: #1b024c;">
+         <children>
+            <ImageView fitHeight="42.0" fitWidth="63.0" layoutX="48.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/darrow.png" />
+               </image>
+            </ImageView>
+            <PasswordField layoutX="257.0" layoutY="232.0" prefHeight="26.0" prefWidth="210.0" promptText="Password" styleClass="textfield" stylesheets="@stylesheet.css" />
+            <ImageView fitHeight="136.0" fitWidth="200.0" layoutX="294.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/user.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="32.0" layoutX="225.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/username.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="32.0" layoutX="225.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/password.png" />
+               </image>
+            </ImageView>
+            <Button contentDisplay="CENTER" layoutX="257.0" layoutY="291.0" mnemonicParsing="false" onMouseClicked="#loginHandle" prefHeight="32.0" prefWidth="210.0" styleClass="loginbutton" stylesheets="@stylesheet.css" text="Login" textAlignment="CENTER" />
+            <Label layoutX="272.0" layoutY="347.0" prefHeight="42.0" prefWidth="91.0" styleClass="newuser" text="New User? " textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Bookman Old Style" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="351.0" layoutY="347.0" onMouseClicked="#handelRegister" prefHeight="42.0" prefWidth="118.0" text="Create Account" textFill="#6a8fc9" wrapText="true">
+               <font>
+                  <Font name="Bookman Old Style" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <TextField layoutX="257.0" layoutY="168.0" prefHeight="26.0" prefWidth="210.0" promptText="Username" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

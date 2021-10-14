@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorpane" prefHeight="509.0" prefWidth="723.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xenmax.DashboardController">
+    <stylesheets>
+        <URL value="@stylesheet.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="36.0" prefWidth="723.0" style="-fx-background-color: #1b024c;">
+         <children>
+            <ImageView fitHeight="36.0" fitWidth="29.0" layoutX="-1.0" layoutY="2.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/back.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="29.0" layoutX="32.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/xenmaxc.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="29.0" layoutX="693.0" layoutY="3.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/exit1.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="minimize" fitHeight="36.0" fitWidth="29.0" layoutX="663.0" layoutY="3.0" onMouseClicked="#minimizeHandle" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/minimize.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="306.0" layoutY="-3.0" prefHeight="36.0" prefWidth="111.0" text="XenMax" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="profile_container" layoutY="46.0" prefHeight="36.0" prefWidth="171.0" style="-fx-background-color: #1b024c;">
+         <children>
+            <ImageView fx:id="profile_logo" fitHeight="36.0" fitWidth="29.0" layoutX="68.0" layoutY="1.0" onMouseClicked="#handleTab" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/profile.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="retrive_container" layoutX="365.0" layoutY="46.0" prefHeight="36.0" prefWidth="186.0" style="-fx-background-color: #1b024c;">
+         <children>
+            <ImageView fx:id="download_logo" fitHeight="36.0" fitWidth="29.0" layoutX="78.0" layoutY="6.0" onMouseClicked="#handleTab" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/download.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="upload_container" layoutX="179.0" layoutY="46.0" prefHeight="36.0" prefWidth="177.0" style="-fx-background-color: #1b024c;">
+         <children>
+            <ImageView fx:id="upload_logo" fitHeight="36.0" fitWidth="29.0" layoutX="78.0" layoutY="2.0" onMouseClicked="#handleTab" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/upload.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="transfer_container" layoutX="559.0" layoutY="46.0" prefHeight="36.0" prefWidth="164.0" style="-fx-background-color: #1b024c;">
+         <children>
+            <ImageView fx:id="transfer_logo" fitHeight="36.0" fitWidth="29.0" layoutX="71.0" layoutY="5.0" onMouseClicked="#handleTab" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/transfer.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="upload_window" layoutY="89.0" prefHeight="419.0" prefWidth="723.0" style="-fx-background-color: #1b024c;">
+         <children>
+            <Label layoutX="175.0" layoutY="192.0" prefHeight="36.0" prefWidth="177.0" text="Choose File" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Button layoutX="352.0" layoutY="198.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="186.0" text="Brows File" />
+            <Button layoutX="280.0" layoutY="302.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="164.0" styleClass="loginbutton" stylesheets="@stylesheet.css" text="Save " />
+            <Label layoutX="267.0" layoutY="248.0" prefHeight="36.0" prefWidth="269.0" text="selected file" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="36.0" fitWidth="29.0" layoutX="257.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/darrow.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="download_window" layoutY="89.0" prefHeight="425.0" prefWidth="723.0" style="-fx-background-color: #1b024c;">
+         <children>
+            <ImageView fitHeight="36.0" fitWidth="29.0" layoutX="443.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/darrow.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="profile_window" layoutY="89.0" prefHeight="419.0" prefWidth="723.0" style="-fx-background-color: #1b024c;">
+         <children>
+            <Label layoutX="181.0" layoutY="286.0" prefHeight="36.0" prefWidth="152.0" text="Name" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="181.0" layoutY="377.0" prefHeight="36.0" prefWidth="152.0" text="Date Of Birth" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="167.0" fitWidth="200.0" layoutX="262.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/xenmaxc.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="392.0" layoutY="286.0" prefHeight="36.0" prefWidth="269.0" text="Mukesh Netam" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="393.0" layoutY="377.0" prefHeight="36.0" prefWidth="164.0" text="24/06/1997" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="357.0" layoutY="286.0" prefHeight="36.0" prefWidth="17.0" text=":" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="354.0" layoutY="377.0" prefHeight="36.0" prefWidth="17.0" text=":" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="181.0" layoutY="332.0" prefHeight="36.0" prefWidth="152.0" text="Username" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="392.0" layoutY="332.0" prefHeight="36.0" prefWidth="269.0" text="Baymax" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="357.0" layoutY="332.0" prefHeight="36.0" prefWidth="17.0" text=":" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="36.0" fitWidth="29.0" layoutX="66.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/darrow.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="291.0" prefHeight="66.0" prefWidth="230.0" text="Profile" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="transfer_window" layoutY="89.0" prefHeight="419.0" prefWidth="723.0" style="-fx-background-color: #1b024c;">
+         <children>
+            <Label layoutX="175.0" layoutY="199.0" prefHeight="36.0" prefWidth="111.0" text="Select File" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="tselect_file" layoutX="336.0" layoutY="205.0" mnemonicParsing="false" onMouseClicked="#choose_file" prefHeight="25.0" prefWidth="152.0" text="Browse File" />
+            <Label fx:id="transferLabel" layoutX="181.0" layoutY="246.0" prefHeight="36.0" prefWidth="318.0" text="Select File" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Button layoutX="270.0" layoutY="308.0" mnemonicParsing="false" onMouseClicked="#transferHandle" prefHeight="25.0" prefWidth="138.0" styleClass="loginbutton" stylesheets="@stylesheet.css" text="Transfer" />
+            <ImageView fitHeight="36.0" fitWidth="29.0" layoutX="632.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/darrow.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
